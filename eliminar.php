@@ -1,13 +1,17 @@
 <?php
 function conexionDB(){
-  $data = "mysql:host=localhost;dbname=6829";
-  $conexion = new PDO($data, '6829', 'rata.higuera.guante');
+  $data = "mysql:host=localhost;dbname=webgenerator";
+  $conexion = new PDO($data, 'adm_webgenerator', 'webgenerator2024');
   return $conexion;
 }
 ?>
 
+
 <?php
     $file = $_GET['dominio']; 
+
+    
+    
 if ($file) {
     $conexion=conexionDB();
     shell_exec("rm -r $file");

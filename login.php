@@ -1,11 +1,10 @@
 <?php
 function conexionDB(){
-  $data = "mysql:host=localhost;dbname=6829";
-  $conexion = new PDO($data, '6829', 'rata.higuera.guante');
+  $data = "mysql:host=localhost;dbname=webgenerator";
+  $conexion = new PDO($data, 'adm_webgenerator', 'webgenerator2024');
   return $conexion;
 }
 ?>
-
 <?php
 // shell_exec("rm -r ../web");
 $email= filter_input(INPUT_POST,'email');
